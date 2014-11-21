@@ -1,0 +1,167 @@
+<html>
+<head>
+<style>
+	.color { color: blue;
+	}
+</style>
+
+
+
+
+<script type='text/javascript' src='http://lrn.icstars.org/redball.js'></script>
+	<title> button </title>
+		<script>
+		
+			
+			
+			
+			function myfunction(){
+			alert("the real button");
+			}
+			
+			function moveup(){
+				if ( redball.top >= 5) {
+				redball.top=redball.top-5; }
+					else { // do nothing
+						}	
+							}
+			function movedown(){
+					if ( redball.top <= 620) 
+					{redball.top=redball.top+5; }
+						else { // do nothing 
+						}
+						}
+			function moveleft(){
+					if ( redball.left  >= 5) {
+					redball.left=redball.left-5;
+					}
+						else { 
+							// do nothing
+							}
+							}
+							
+			function moveright(){
+				if ( redball.left <= 1315)
+				{redball.left=redball.left+5;}
+					else { //do nothing 
+			} 
+			}
+			function moveupleft(){
+				moveup(); moveleft();
+			}
+			function movedownright(){
+				movedown(); moveright();
+							}
+			function movedownleft(){
+				movedown(); moveleft();
+							}
+			function moveupright(){
+				moveup();
+				moveright();
+				}				
+			function movesquare(){
+				moveup()
+				moveup()
+				moveup()
+				moveup()
+				moveleft()
+				moveleft()
+				moveleft()
+				moveleft()
+				movedown()
+				movedown()
+				movedown()
+				movedown()
+				moveright()
+				moveright()
+				moveright()
+				moveright()
+				} 
+			function movedown2(){
+				redball.top=redball.top+20;}
+			function movetriangle(){
+				moveupright()
+				moveupright()
+				moveupright()
+				movedownright()
+				movedownright()
+				movedownright()
+				moveleft()
+				moveleft()
+				moveleft()
+				moveleft()
+				moveleft()
+				moveleft()
+				}
+			function bounce() {
+				for ( var i = 1 ; i <= 20; i ++) {
+				moveupright(); }
+				for ( var i = 1 ; i <= 20; i ++) {
+				movedownright();}
+				for ( var i = 1 ; i <= 20; i ++) {
+				moveupright(); }
+				for ( var i =1 ; i <= 20; i ++) {
+				movedownright(); }
+				}
+				
+						 function octogan() { 
+            				for ( var i = 1 ; i <= 20; i ++) {
+            				moveright(); }
+            				for ( var i = 1 ; i <= 20; i ++) {
+            				movedownright(); }
+            				for ( var i = 1 ; i  <=20; i ++) {
+            				movedown(); }
+            				for ( var i = 1 ; i <=20; i ++) {
+            				movedownleft(); }
+							for ( var i = 1; i <= 20; i ++) {
+							moveleft(); }
+							for ( var i = 1 ; i <= 20; i ++) {
+							moveupleft(); }
+							for ( var i = 1 ; i <= 20; i ++) {
+							moveup (); }
+							for  ( var i = 1 ; i <= 20; i ++) {
+							moveupright (); }
+							}				
+				function movex() {
+					for ( var i = 1 ;  i <= 20; i ++) {
+						movedownright(); }
+					for ( var i  = 1 ; i <= 10; i ++) {
+						moveupleft(); } 
+					for ( var i = 1 ; i <= 10; i ++) { 
+						moveupright(); }
+					for ( var I = 1 ; i <= 20 ; i ++) {
+						movedownleft(); }
+					}
+		</script>
+</head>
+<body>
+	<button class="color" onclick="alert('button was clicked')">super button</button>
+	<button class="color" onclick="myfunction()">new button</button>
+	<img id="redball" src="red-ball.png" alt="red ball" height="42" width="42">
+		<table>
+			<tr>
+				<td><button onclick="moveupleft()"><img src="upleft.jpg" height="50" width="50"></button></td>
+				<td><button onclick="moveup()"><img src="up.jpg" height="50" width="50"></button></td>
+				<td><button onclick="moveupright()"><img src="upright.jpg" height="50" width="50"></button></td>
+			</tr>
+		</table>
+		<table>
+			<tr>
+				<td><button onclick="moveleft()"><img src="left.jpg" height="50" width="50"></button></td>
+				<td><button onclick="octogan()"> move octogan</button></td>
+				<td><button onclick="moveright()"><img src="right.jpg" height="50" width="50"></button></td>
+			</tr>
+		</table>
+		<table>
+			<tr>
+				<td><button onclick="movedownleft()"><img src="downleft.jpg" height="50" width="50"></button></td>
+				<td><button onclick="movedown()"><img src="down.jpg" height="50" width="50"></button></td>
+				<td><button onclick="movedownright()"><img src="downright.jpg" height="50" width="50"></button></td>
+			</tr>
+		</table>
+	<button onclick="movesquare()">moves square</button>
+	<button onclick="movetriangle()">moves triangle</button>   
+	<button onclick="bounce()">bounce</button>
+	<button onclick="movex()"> super x</button>
+</body>
+</html>
